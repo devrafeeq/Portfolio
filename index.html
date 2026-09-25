@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawodu Rafeeq — Full Stack Software Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons for Live & GitHub links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Separate Stylesheet Link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./IMAGES/my logo.png">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="brand-container">
+                <!-- Logo Placement -->
+                <img src="./IMAGES/my logo.png" alt="Ramzy Tech Logo" class="brand-logo">
+                <div>
+                    <div class="logo-text">Dawodu Rafeeq</div>
+                    <div class="logo-sub">Full Stack & Systems Engineer</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-preview">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#">
+                <div class="badge-available">
+                    <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                            viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.877a2 2 0 0 0 1.94-1.515L22 17" />
+                        </svg></span>
+                    <span>Download CV</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content reveal is-visible">
+                <h1>Bridging <span>Systems Architecture</span> & Modern Web.</h1>
+                <p>Hi, I'm Dawodu Rafeeq. I build resilient, high-throughput web applications with clean architecture,
+                    algorithmic efficiency, and an eye for minimalist design.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Explore Projects</a>
+                    <a href="#contact" class="btn-outline">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Profile Image Container (Replaced Terminal Box) -->
+            <div class="hero-profile-container reveal is-visible">
+                <div class="profile-card">
+                    <div class="profile-img-wrapper">
+                        <!-- REPLACE WITH YOUR IMAGE PATH -->
+                        <img src="./IMAGES/my picture.jpg" alt="Dawodu Rafeeq" class="profile-img">
+                        <div class="profile-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION (HOME PAGE PREVIEW) -->
+        <section id="about-preview" style="padding: 60px 20px; background-color: #111827; color: #ffffff;">
+            <div
+                style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+                <h2 style="font-size: 2.2rem; margin-bottom: 10px; color: #1e90ff;">
+                    About <span style="color: #d98a2b;">Me</span>
+                </h2>
+                <div style="width: 60px; height: 3px; background-color: #d98a2b; margin-bottom: 25px;"></div>
+
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #e5e7eb; max-width: 800px; margin-bottom: 30px;">
+                    Hi, I’m <strong>Dawodu Rafeeq Folahan</strong>, a passionate Full Stack Web Developer and UI/UX
+                    Designer.
+                    I specialize in crafting high-performance modern web applications, combining intuitive design with
+                    clean,
+                    robust backend systems to turn complex ideas into seamless digital solutions.
+                </p>
+
+                <a href="./about.html" style="
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 12px 28px; 
+            background-color: #1e90ff; 
+            color: #ffffff; 
+            font-weight: 600; 
+            font-size: 1rem; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            box-shadow: 0 4px 14px rgba(30, 144, 255, 0.3);
+            transition: all 0.3s ease;">
+                    <span>More About Me</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                    </svg>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h2 class="section-title reveal">Featured Work</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="project-image-wrapper">
+                        <!-- Replace with actual website image -->
+                        <img src="./IMAGES/project1.jpg" alt="OmniFlow Logistics Platform" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>OmniFlow Logistics</h3>
+                        <p class="project-about">Enterprise cloud operations dashboard featuring real-time socket updates, custom aggregation pipelines, and high concurrency resilience.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>WebSocket</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://example.com" target="_blank" class="btn-card-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/devrafeeq" target="_blank" class="btn-card-github">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal">
+                    <div class="project-image-wrapper">
+                        <!-- Replace with actual website image -->
+                        <img src="./IMAGES/project2.jpg" alt="PulseEngine API Gateway" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>PulseEngine API Gateway</h3>
+                        <p class="project-about">High-throughput reverse proxy designed with token bucket rate-limiting and circuit-breaker patterns to prevent downtime.</p>
+                        <div class="tech-tags">
+                            <span>TypeScript</span>
+                            <span>Express</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://example.com" target="_blank" class="btn-card-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/devrafeeq" target="_blank" class="btn-card-github">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal">
+                    <div class="project-image-wrapper">
+                        <!-- Replace with actual website image -->
+                        <img src="./IMAGES/project3.jpg" alt="Synapse Hardware Bridge" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>Synapse Hardware Bridge</h3>
+                        <p class="project-about">Direct communication bridge connecting physical ESP32 sensors via MQTT to a live web dashboard with sub-100ms response delays.</p>
+                        <div class="tech-tags">
+                            <span>Embedded C</span>
+                            <span>MQTT</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://example.com" target="_blank" class="btn-card-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/devrafeeq" target="_blank" class="btn-card-github">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VIEW MORE PROJECTS BUTTON -->
+<div class="more-projects-wrapper">
+    <a href="./projects.html" class="btn-more-projects">
+        <span>View All Projects</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2 class="reveal">Let's Build Together</h2>
+            <p class="reveal">Have an engineering challenge or looking for a developer? Send a transmission.</p>
+
+            <form class="contact-form reveal"
+                onsubmit="event.preventDefault(); alert('Transmission dispatched successfully!');">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="e.g. Sarah Connor" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="sarah@cyberdyne.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Describe the project parameters..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top: 0.5rpx; cursor: pointer;">Transmit
+                    Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Glowing Divider Line -->
+        <div class="footer-divider"></div>
+
+        <div class="footer-container">
+            <!-- Brand / Overview Column -->
+            <div class="footer-brand">
+                <a href="#home" class="brand-container">
+                    <img src="./IMAGES/my logo.png" alt="Ramzy Tech Logo" class="brand-logo">
+                    <div>
+                        <span class="logo-text">RAMZY</span>
+                        <span class="logo-sub">_TECH</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Crafting modern, high-performance web experiences with sleek visual design and precision code.
+                </p>
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="https://github.com/devrafeeq" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ramzywill04?lang=en" target="_blank" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Column -->
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about-preview">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter / CTA Card Column -->
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to get notified about new projects and updates.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email" required />
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Bar: Copyright & Terms -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 DAWODU RAFEEQ / RAMZY_TECH. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const revealItems = document.querySelectorAll('.reveal:not(.is-visible)');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+
+    <script src="animation.js"></script>
+</body>
+
+</html>
