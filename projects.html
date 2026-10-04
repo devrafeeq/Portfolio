@@ -1,52 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects | Dawodu Rafeeq Folahan</title>
+    <title>Projects Portfolio | Dawodu Rafeeq Folahan — Full Stack Website Developer</title>
     <link rel="icon" href="./IMAGES/my logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons & Devicon Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="projects.css">
 </head>
 
 <body>
 
-    <!-- AMBIENT GLOW BACKGROUND -->
+    <!-- MOVING, SPARKLE & SHOOTING STARS BACKGROUND -->
+    <div class="stars-container" aria-hidden="true">
+        <!-- Twinkling & Pulsing Stars -->
+        <div class="star star-cyan" style="--top: 5%; --left: 8%; --size: 4px; --duration: 3.5s; --delay: 0s;"></div>
+        <div class="star star-white" style="--top: 10%; --left: 25%; --size: 3px; --duration: 4s; --delay: 1.2s;"></div>
+        <div class="star star-cyan" style="--top: 15%; --left: 10%; --size: 3px; --duration: 4s; --delay: 0s;"></div>
+        <div class="star star-white" style="--top: 12%; --left: 60%; --size: 3px; --duration: 5s; --delay: 2.5s;"></div>
+        <div class="star star-orange" style="--top: 18%; --left: 45%; --size: 4px; --duration: 4.8s; --delay: 0.3s;"></div>
+        <div class="star star-orange" style="--top: 25%; --left: 80%; --size: 4px; --duration: 6s; --delay: 1s;"></div>
+        <div class="star star-cyan" style="--top: 28%; --left: 92%; --size: 5px; --duration: 3.8s; --delay: 1.7s;"></div>
+        <div class="star star-white" style="--top: 32%; --left: 5%; --size: 3px; --duration: 4.2s; --delay: 0.9s;"></div>
+        <div class="star star-cyan" style="--top: 35%; --left: 15%; --size: 4px; --duration: 4.5s; --delay: 1.2s;"></div>
+        <div class="star star-cyan" style="--top: 40%; --left: 30%; --size: 3px; --duration: 3s; --delay: 2s;"></div>
+        <div class="star star-orange" style="--top: 42%; --left: 58%; --size: 4px; --duration: 5.5s; --delay: 0.4s;"></div>
+        <div class="star star-white" style="--top: 48%; --left: 82%; --size: 3px; --duration: 4.1s; --delay: 1.8s;"></div>
+        <div class="star star-orange" style="--top: 50%; --left: 90%; --size: 5px; --duration: 6s; --delay: 0.8s;"></div>
+        <div class="star star-cyan" style="--top: 55%; --left: 12%; --size: 4px; --duration: 3.6s; --delay: 2.2s;"></div>
+        <div class="star star-white" style="--top: 60%; --left: 70%; --size: 3px; --duration: 5s; --delay: 0.5s;"></div>
+        <div class="star star-orange" style="--top: 65%; --left: 38%; --size: 4px; --duration: 4.7s; --delay: 1.1s;"></div>
+        <div class="star star-cyan" style="--top: 68%; --left: 52%; --size: 3px; --duration: 3.9s; --delay: 0.6s;"></div>
+        <div class="star star-white" style="--top: 72%; --left: 95%; --size: 4px; --duration: 5.2s; --delay: 2.8s;"></div>
+        <div class="star star-orange" style="--top: 75%; --left: 20%; --size: 5px; --duration: 7s; --delay: 3s;"></div>
+        <div class="star star-white" style="--top: 80%; --left: 45%; --size: 3px; --duration: 3.5s; --delay: 2.1s;"></div>
+        <div class="star star-cyan" style="--top: 82%; --left: 65%; --size: 4px; --duration: 4.4s; --delay: 1.3s;"></div>
+        <div class="star star-cyan" style="--top: 85%; --left: 85%; --size: 4px; --duration: 4check; --delay: 1.5s;"></div>
+        <div class="star star-orange" style="--top: 90%; --left: 10%; --size: 4px; --duration: 5.1s; --delay: 0.2s;"></div>
+        <div class="star star-white" style="--top: 93%; --left: 33%; --size: 3px; --duration: 3.7s; --delay: 2.4s;"></div>
+        <div class="star star-cyan" style="--top: 96%; --left: 78%; --size: 4px; --duration: 4.6s; --delay: 1.0s;"></div>
+
+        <!-- Shooting Stars -->
+        <div class="shooting-star" style="--top: 8%; --left: 35%; --delay: 0s;"></div>
+        <div class="shooting-star" style="--top: 22%; --left: 85%; --delay: 2.5s;"></div>
+        <div class="shooting-star" style="--top: 45%; --left: 75%; --delay: 5s;"></div>
+        <div class="shooting-star" style="--top: 62%; --left: 40%; --delay: 7.5s;"></div>
+        <div class="shooting-star" style="--top: 78%; --left: 20%; --delay: 10s;"></div>
+    </div>
+
+    <!-- AMBIENT GLOW -->
     <div class="ambient-glow"></div>
 
     <!-- HEADER & NAVIGATION -->
     <header>
         <div class="nav-container">
             <div class="brand-wrapper">
-                <a href="./index.html" class="btn-back" title="Go to Main Page">
+                <button type="button" class="btn-back" id="btnBack" title="Go to previous page">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span>Back</span>
-                </a>
+                </button>
 
                 <a href="./index.html" class="brand-container">
                     <img src="./IMAGES/my logo.png" alt="Logo" class="brand-logo">
                     <div class="brand-text">
                         <div class="logo-text">Dawodu Rafeeq</div>
-                        <div class="logo-sub">Full Stack Developer</div>
+                        <div class="logo-sub">Full Stack Web Developer</div>
                     </div>
                 </a>
             </div>
 
             <!-- NAVIGATION LINKS -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about_3.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./index.html#hero" class="nav-item">Home</a></li>
+                <li><a href="./about.html" class="nav-item">About</a></li>
+                <li><a href="./about.html#skills" class="nav-item">Skills</a></li>
+                <li><a href="./projects.html" class="nav-item active">Projects</a></li>
+                <li><a href="./index.html#contact" class="nav-item">Contact</a></li>
             </ul>
 
-            <!-- HEADER RIGHT ACTION -->
+            <!-- HEADER RIGHT ACTIONS -->
             <div class="header-actions">
+                <!-- THEME TOGGLE BUTTON -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5M2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1m18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1M11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1m0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1M5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0zM7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0z" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12.3 2a10 10 0 0 0-1.9 20a10 10 0 0 0 8.8-5.3a1 1 0 0 0-1.1-1.4a8 8 0 1 1-6.8-12.3a1 1 0 0 0 1-1A1 1 0 0 0 12.3 2" />
+                    </svg>
+                </button>
+
                 <a href="./path-to-your-cv.pdf" class="btn-cv-header" download>
                     <i class="fa-solid fa-file-arrow-down"></i>
                     <span>Download CV</span>
                 </a>
 
+                <!-- MOBILE MENU TOGGLE BUTTON -->
                 <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -54,119 +112,262 @@
         </div>
     </header>
 
-    <!-- MAIN PROJECTS ARCHIVE SECTION -->
-    <main style="max-width: 1200px; margin: 0 auto; padding: 9rem 1.5rem 5rem; position: relative; z-index: 1;">
-        
-        <!-- SECTION TITLE -->
-        <div style="text-align: center; margin-bottom: 3.5rem;">
-            <div style="color: var(--accent-orange, #ff9500); font-family: var(--font-mono); font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase;">
-                PORTFOLIO ARCHIVE
-            </div>
-            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">
-                All <span class="highlight">Projects</span>
-            </h1>
-            <p style="color: var(--text-muted, #a0a0a0); max-width: 600px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
-                A detailed showcase of applications, front-end interfaces, back-end APIs, and software solutions built.
-            </p>
-        </div>
-
-        <!-- PROJECTS GRID -->
-        <div class="certificates" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            
-            <!-- PROJECT CARD 1 -->
-            <div class="clean" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
-                <div>
-                    <div style="width: 100%; height: 200px; border-radius: 10px; overflow: hidden; margin-bottom: 1.2rem; border: 1px solid var(--border-color, rgba(255,255,255,0.1));">
-                        <img src="./IMAGES/my picture.jpg" alt="E-Commerce Platform" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">E-Commerce Web Application</div>
-                    <p style="color: var(--text-muted, #a0a0a0); font-size: 0.92rem; margin-bottom: 1.2rem; line-height: 1.6;">
-                        Full-stack e-commerce web application featuring user authentication, product search, cart management, and online payment integration.
-                    </p>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-cyan, #00a3ff); background: rgba(0,163,255,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(0,163,255,0.2);">React</span>
-                        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-cyan, #00a3ff); background: rgba(0,163,255,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(0,163,255,0.2);">Node.js</span>
-                        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-cyan, #00a3ff); background: rgba(0,163,255,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(0,163,255,0.2);">MongoDB</span>
-                    </div>
+    <main>
+        <section class="page-section">
+            <div class="archive-hero">
+                <div class="archive-badge">
+                    <i class="fa-solid fa-code-branch"></i> PORTFOLIO ARCHIVE
                 </div>
-                <div style="display: flex; gap: 0.8rem;">
-                    <a href="#" target="_blank" class="btn-primary" style="padding: 0.6rem 1rem; font-size: 0.85rem; width: 100%; justify-content: center;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview
-                    </a>
-                    <a href="https://github.com/Ramzy-Tech04" target="_blank" class="btn-outline" style="padding: 0.6rem 1rem; font-size: 0.85rem; width: 100%; justify-content: center;">
-                        <i class="fa-brands fa-github"></i> Source
-                    </a>
+                <h1 class="archive-title">Featured <span class="highlight">Projects</span></h1>
+                <p class="archive-subtitle">Explore a selection of my latest full stack web applications, interactive web tools, and digital solutions.</p>
+
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="api">APIs & Backend</button>
                 </div>
             </div>
 
-            <!-- PROJECT CARD 2 -->
-            <div class="clean" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
-                <div>
-                    <div style="width: 100%; height: 200px; border-radius: 10px; overflow: hidden; margin-bottom: 1.2rem; border: 1px solid var(--border-color, rgba(255,255,255,0.1));">
-                        <img src="./IMAGES/my picture.jpg" alt="Task Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="projects-grid">
+                <!-- Example Project 1 -->
+                <article class="project-card" data-category="frontend">
+                    <div class="project-image-wrapper">
+                        <img src="./IMAGES/mini calculator.png" alt="Mini Calculator" class="project-image">
                     </div>
-                    <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Task Management Dashboard</div>
-                    <p style="color: var(--text-muted, #a0a0a0); font-size: 0.92rem; margin-bottom: 1.2rem; line-height: 1.6;">
-                        Productivity dashboard designed to organize project workflows, track task statuses, set priorities, and view team progress metrics.
-                    </p>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-orange, #ff9500); background: rgba(255,149,0,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(255,149,0,0.2);">JavaScript</span>
-                        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-orange, #ff9500); background: rgba(255,149,0,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(255,149,0,0.2);">Tailwind CSS</span>
+                    <div class="project-info">
+                        <h3>RamzyCalc Web App</h3>
+                        <p class="project-about">A web-based mathematical calculator application with dynamic expression handling and modern user interfaces.</p>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
                     </div>
-                </div>
-                <div style="display: flex; gap: 0.8rem;">
-                    <a href="#" target="_blank" class="btn-primary" style="padding: 0.6rem 1rem; font-size: 0.85rem; width: 100%; justify-content: center;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview
-                    </a>
-                    <a href="https://github.com/Ramzy-Tech04" target="_blank" class="btn-outline" style="padding: 0.6rem 1rem; font-size: 0.85rem; width: 100%; justify-content: center;">
-                        <i class="fa-brands fa-github"></i> Source
-                    </a>
-                </div>
-            </div>
+                </article>
 
-        </div>
+                <!-- Example Project 2 -->
+                <article class="project-card" data-category="frontend">
+                    <div class="project-image-wrapper">
+                        <img src="./IMAGES/young p.png" alt="YoungP Electrical Portfolio Website" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>YoungP Electrical Website</h3>
+                        <p class="project-about">A full business website built for an electrical service provider to display catalogues and handle client booking requests.</p>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Example Project 3 -->
+                <article class="project-card" data-category="api">
+                    <div class="project-image-wrapper">
+                        <img src="./IMAGES/my logo.png" alt="RESTful API Service" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task & Workflow REST API</h3>
+                        <p class="project-about">Scalable RESTful API providing JWT authentication, rate limiting, MongoDB database schemas, and modular routing handlers.</p>
+                        <div class="tech-tags">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <!-- FOOTER SECTION -->
-    <footer id="contact" class="site-footer">
-        <div class="footer-divider"></div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-overlay-glow"></div>
+        
         <div class="footer-container">
-            <div class="footer-brand">
-                <a href="./index.html" class="brand-container">
-                    <img src="./IMAGES/my logo.png" alt="Logo" class="brand-logo">
-                    <div>
-                        <div class="logo-text">Dawodu Rafeeq</div>
-                        <div class="logo-sub">Full Stack Developer</div>
+            <!-- Brand & Availability Column -->
+            <div class="footer-col footer-col-brand">
+                <a href="./index.html#home" class="footer-brand-logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="./IMAGES/my logo.png" alt="Dawodu Rafeeq Favicon Logo" class="footer-logo-img">
+                    </div>
+                    <div class="brand-text">
+                        <span class="logo-text">Dawodu <span class="text-cyan">Rafeeq</span></span>
+                        <span class="logo-sub">Full Stack Website Developer</span>
                     </div>
                 </a>
-                <p class="footer-desc">Crafting dynamic, responsive, and performance-driven web applications.</p>
+                
+                <p class="footer-desc">
+                    Building fast, modern & scalable websites & applications that make an impact.
+                </p>
+
+                <!-- Social Media Links -->
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Ramzy-Tech04" target="_blank" aria-label="GitHub" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Work Status Card -->
+                <div class="availability-badge">
+                    <div class="badge-icon-bg">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="badge-info">
+                        <strong>Available Worldwide</strong>
+                        <span>Open to work • Remote Friendly</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-nav">
-                <h4>Quick Links</h4>
+
+            <!-- Quick Links Column -->
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-title">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about_3.html">About Me</a></li>
+                    <li><a href="./index.html#home"><i class="fa-solid fa-chevron-right link-chevron"></i> Home</a></li>
+                    <li><a href="./about.html#about-story"><i class="fa-solid fa-chevron-right link-chevron"></i> About</a></li>
+                    <li><a href="./projects.html"><i class="fa-solid fa-chevron-right link-chevron"></i> Projects</a></li>
+                    <li><a href="./index.html#contact"><i class="fa-solid fa-chevron-right link-chevron"></i> Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Get In Touch Column -->
+            <div class="footer-col footer-col-touch">
+                <h4 class="footer-title">Get In Touch</h4>
+                <p class="touch-desc">
+                    Have a question, collaboration idea or just want to say hi?<br>I'd love to hear from you.
+                </p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <a href="mailto:dawodurafeeq84@gmail.com">dawodurafeeq84@gmail.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <a href="https://wa.me/2349038665922" target="_blank">09038665922</a>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Ibadan, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Card Column -->
+            <div class="footer-col footer-col-cta">
+                <h4 class="footer-title">Have a Project?</h4>
+                <div class="cta-card">
+                    <p class="cta-text">
+                        Let's discuss your project and create something impactful together.
+                    </p>
+                    <a href="./index.html#contact" class="btn-hire-me">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Start a Project</span>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <!-- Bottom Copyright Section -->
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p>&copy; 2026 Dawodu Rafeeq Folahan. All Rights Reserved.</p>
+                <p>&copy; 2026 <span class="copyright-name">Dawodu Rafeeq</span>. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MOBILE MENU SCRIPT -->
+    <!-- INTERACTIVE JAVASCRIPT -->
     <script>
+        // Back Button Logic
+        const btnBack = document.getElementById('btnBack');
+        if (btnBack) {
+            btnBack.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (window.history.length > 1 && document.referrer) {
+                    window.history.back();
+                } else {
+                    window.location.href = './index.html';
+                }
+            });
+        }
+
+        // Light/Dark Theme Switcher Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const rootHtml = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        rootHtml.setAttribute('data-theme', savedTheme);
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = rootHtml.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                rootHtml.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        // Mobile Menu Navigation Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        const icon = menuToggle.querySelector('i');
+        const icon = menuToggle ? menuToggle.querySelector('i') : null;
 
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-xmark');
+                    }
+                });
+            });
+        }
+
+        // Category Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
     </script>
 </body>
+
 </html>

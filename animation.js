@@ -163,46 +163,46 @@
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(".nav-links a");
 
-  // 1. Collect all target section IDs safely from navigation links
-  const targets = Array.from(navLinks)
-    .map(link => link.getAttribute("href"))
-    .filter(href => href && href.startsWith("#") && href.length > 1)
-    .map(href => href.substring(1));
+    // 1. Collect all target section IDs safely from navigation links
+    const targets = Array.from(navLinks)
+        .map(link => link.getAttribute("href"))
+        .filter(href => href && href.startsWith("#") && href.length > 1)
+        .map(href => href.substring(1));
 
-  // 2. Select only sections that actually exist on the page
-  const sections = targets
-    .map(id => document.getElementById(id))
-    .filter(section => section !== null);
+    // 2. Select only sections that actually exist on the page
+    const sections = targets
+        .map(id => document.getElementById(id))
+        .filter(section => section !== null);
 
-  // 3. Set up Intersection Observer
-  const observerOptions = {
-    root: null,
-    rootMargin: "-20% 0px -60% 0px", // Activates when section enters the upper viewport
-    threshold: 0
-  };
+    // 3. Set up Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -60% 0px", // Activates when section enters the upper viewport
+        threshold: 0
+    };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute("id");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
 
-        // Clear 'active' class from all nav links
-        navLinks.forEach((link) => link.classList.remove("active"));
+                // Clear 'active' class from all nav links
+                navLinks.forEach((link) => link.classList.remove("active"));
 
-        // Safely find and highlight the matching nav link
-        const activeLink = Array.from(navLinks).find(
-          (link) => link.getAttribute("href") === `#${id}`
-        );
+                // Safely find and highlight the matching nav link
+                const activeLink = Array.from(navLinks).find(
+                    (link) => link.getAttribute("href") === `#${id}`
+                );
 
-        if (activeLink) {
-          activeLink.classList.add("active");
-        }
-      }
-    });
-  }, observerOptions);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+        });
+    }, observerOptions);
 
-  // Observe all valid sections
-  sections.forEach((section) => observer.observe(section));
+    // Observe all valid sections
+    sections.forEach((section) => observer.observe(section));
 });

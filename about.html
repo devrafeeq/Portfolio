@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Dawodu Rafeeq Folahan</title>
+    <title>About Me | Dawodu Rafeeq Folahan — Full Stack Website Developer</title>
     <link rel="icon" href="./IMAGES/my logo.png">
-    <!-- Font Awesome Icons -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons & Devicon Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="about.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
 </head>
 
 <body>
+
+    <!-- MOVING, SPARKLE & SHOOTING STARS BACKGROUND -->
+    <div class="stars-container" aria-hidden="true">
+        <!-- Twinkling & Pulsing Stars -->
+        <div class="star star-cyan" style="--top: 5%; --left: 8%; --size: 4px; --duration: 3.5s; --delay: 0s;"></div>
+        <div class="star star-white" style="--top: 10%; --left: 25%; --size: 3px; --duration: 4s; --delay: 1.2s;"></div>
+        <div class="star star-cyan" style="--top: 15%; --left: 10%; --size: 3px; --duration: 4s; --delay: 0s;"></div>
+        <div class="star star-white" style="--top: 12%; --left: 60%; --size: 3px; --duration: 5s; --delay: 2.5s;"></div>
+        <div class="star star-orange" style="--top: 18%; --left: 45%; --size: 4px; --duration: 4.8s; --delay: 0.3s;"></div>
+        <div class="star star-orange" style="--top: 25%; --left: 80%; --size: 4px; --duration: 6s; --delay: 1s;"></div>
+        <div class="star star-cyan" style="--top: 28%; --left: 92%; --size: 5px; --duration: 3.8s; --delay: 1.7s;"></div>
+        <div class="star star-white" style="--top: 32%; --left: 5%; --size: 3px; --duration: 4.2s; --delay: 0.9s;"></div>
+        <div class="star star-cyan" style="--top: 35%; --left: 15%; --size: 4px; --duration: 4.5s; --delay: 1.2s;"></div>
+        <div class="star star-cyan" style="--top: 40%; --left: 30%; --size: 3px; --duration: 3s; --delay: 2s;"></div>
+        <div class="star star-orange" style="--top: 42%; --left: 58%; --size: 4px; --duration: 5.5s; --delay: 0.4s;"></div>
+        <div class="star star-white" style="--top: 48%; --left: 82%; --size: 3px; --duration: 4.1s; --delay: 1.8s;"></div>
+        <div class="star star-orange" style="--top: 50%; --left: 90%; --size: 5px; --duration: 6s; --delay: 0.8s;"></div>
+        <div class="star star-cyan" style="--top: 55%; --left: 12%; --size: 4px; --duration: 3.6s; --delay: 2.2s;"></div>
+        <div class="star star-white" style="--top: 60%; --left: 70%; --size: 3px; --duration: 5s; --delay: 0.5s;"></div>
+        <div class="star star-orange" style="--top: 65%; --left: 38%; --size: 4px; --duration: 4.7s; --delay: 1.1s;"></div>
+        <div class="star star-cyan" style="--top: 68%; --left: 52%; --size: 3px; --duration: 3.9s; --delay: 0.6s;"></div>
+        <div class="star star-white" style="--top: 72%; --left: 95%; --size: 4px; --duration: 5.2s; --delay: 2.8s;"></div>
+        <div class="star star-orange" style="--top: 75%; --left: 20%; --size: 5px; --duration: 7s; --delay: 3s;"></div>
+        <div class="star star-white" style="--top: 80%; --left: 45%; --size: 3px; --duration: 3.5s; --delay: 2.1s;"></div>
+        <div class="star star-cyan" style="--top: 82%; --left: 65%; --size: 4px; --duration: 4.4s; --delay: 1.3s;"></div>
+        <div class="star star-cyan" style="--top: 85%; --left: 85%; --size: 4px; --duration: 4s; --delay: 1.5s;"></div>
+        <div class="star star-orange" style="--top: 90%; --left: 10%; --size: 4px; --duration: 5.1s; --delay: 0.2s;"></div>
+        <div class="star star-white" style="--top: 93%; --left: 33%; --size: 3px; --duration: 3.7s; --delay: 2.4s;"></div>
+        <div class="star star-cyan" style="--top: 96%; --left: 78%; --size: 4px; --duration: 4.6s; --delay: 1.0s;"></div>
+
+        <!-- Shooting Stars -->
+        <div class="shooting-star" style="--top: 8%; --left: 35%; --delay: 0s;"></div>
+        <div class="shooting-star" style="--top: 22%; --left: 85%; --delay: 2.5s;"></div>
+        <div class="shooting-star" style="--top: 45%; --left: 75%; --delay: 5s;"></div>
+        <div class="shooting-star" style="--top: 62%; --left: 40%; --delay: 7.5s;"></div>
+        <div class="shooting-star" style="--top: 78%; --left: 20%; --delay: 10s;"></div>
+    </div>
 
     <!-- AMBIENT GLOW -->
     <div class="ambient-glow"></div>
@@ -20,29 +72,41 @@
     <header>
         <div class="nav-container">
             <div class="brand-wrapper">
-                <a href="javascript:history.back()" class="btn-back" title="Go to previous page">
+                <button type="button" class="btn-back" id="btnBack" title="Go to previous page">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span>Back</span>
-                </a>
+                </button>
 
                 <a href="./index.html" class="brand-container">
                     <img src="./IMAGES/my logo.png" alt="Logo" class="brand-logo">
                     <div class="brand-text">
                         <div class="logo-text">Dawodu Rafeeq</div>
-                        <div class="logo-sub">Full Stack Developer</div>
+                        <div class="logo-sub">Full Stack Web Developer</div>
                     </div>
                 </a>
             </div>
 
             <!-- NAVIGATION LINKS -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" class="nav-item active">Home</a></li>
+                <li><a href="#about-story" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="./projects.html" class="nav-item">Projects</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
 
-            <!-- HEADER RIGHT ACTION -->
+            <!-- HEADER RIGHT ACTIONS -->
             <div class="header-actions">
+                <!-- THEME TOGGLE BUTTON -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5M2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1m18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1M11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1m0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1M5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0zM7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0z" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12.3 2a10 10 0 0 0-1.9 20a10 10 0 0 0 8.8-5.3a1 1 0 0 0-1.1-1.4a8 8 0 1 1-6.8-12.3a1 1 0 0 0 1-1A1 1 0 0 0 12.3 2" />
+                    </svg>
+                </button>
+
                 <a href="./path-to-your-cv.pdf" class="btn-cv-header" download>
                     <i class="fa-solid fa-file-arrow-down"></i>
                     <span>Download CV</span>
@@ -56,278 +120,446 @@
         </div>
     </header>
 
-
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="abt hero-content">
-            <div class="more">MORE ABOUT ME</div>
-            <h1 class="name">I'M <br><span class="highlight">Dawodu Rafeeq Folahan.</span></h1>
-            <div class="occupation">
-                <span>Full Stack Web Developer</span>
-                <hr>
-            </div>
-            <p>I am a passionate Full Stack Web Developer and UI/UX Designer with 2+ years of experience building
-                dynamic and responsive web applications. I love turning complex problems into simple, beautiful, and
-                modern solutions.</p>
-
-            <div class="button hero-actions">
-                <a href="#" class="btn-primary down">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.877a2 2 0 0 0 1.94-1.515L22 17" />
-                    </svg>
-                    Download CV
-                </a>
-                <a href="mailto:dawodurafeeq84@gmail.com?subject=Professional%20Inquiry" class="btn-outline con">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="m2.357 7.714l6.98 4.654c.963.641 1.444.962 1.964 1.087c.46.11.939.11 1.398 0c.52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327" />
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-
-            <div class="icons">
-                <a href="https://github.com/Ramzy-Tech04" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" title="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-profile-container">
-            <div class="profile-card">
-                <div class="profile-img-wrapper">
-                    <img src="./IMAGES/my picture.jpg" alt="Dawodu Rafeeq Folahan" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHARACTERISTICS CARDS -->
-    <div class="cha-container">
-        <div class="cha">
-            <div class="clean">
-                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 36 36"
-                    style="color: var(--accent-cyan);">
-                    <path fill="currentColor"
-                        d="M13.71 12.59a1 1 0 0 0-1.39-.26l-6.53 4.45a1 1 0 0 0 0 1.65l6.53 4.45a1 1 0 1 0 1.13-1.65l-5.32-3.62L13.45 14a1 1 0 0 0 .26-1.41" />
-                    <path fill="currentColor"
-                        d="m30.21 16.78l-6.53-4.45A1 1 0 1 0 22.55 14l5.32 3.63l-5.32 3.63a1 1 0 0 0 1.13 1.65l6.53-4.45a1 1 0 0 0 0-1.65Z" />
-                    <path fill="currentColor"
-                        d="M19.94 9.83a.9.9 0 0 0-1.09.66l-3.44 13.8a.9.9 0 0 0 .66 1.09h.22a.9.9 0 0 0 .87-.68l3.44-13.81a.9.9 0 0 0-.66-1.06" />
-                </svg>
-                <div class="l1">Clean Code</div>
-                <div class="l2">Writing clean, scalable, and maintainable code.</div>
-            </div>
-
-            <div class="clean">
-                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"
-                    style="color: var(--accent-orange);">
-                    <path fill="currentColor"
-                        d="M3.414 13.778L2 15.192l4.949 2.121l2.122 4.95l1.414-1.414l-.707-3.536L13.091 14l3.61 7.704l1.339-1.339l-1.19-10.123l2.828-2.829a2 2 0 1 0-2.828-2.828l-2.903 2.903L3.824 6.297L2.559 7.563l7.644 3.67l-3.253 3.253z" />
-                </svg>
-                <div class="l1">Problem Solver</div>
-                <div class="l2">Solving complex business requirements with simplicity.</div>
-            </div>
-
-            <div class="clean">
-                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 1024 1024"
-                    style="color: var(--accent-cyan);">
-                    <path fill="currentColor"
-                        d="M824.2 699.9a301.6 301.6 0 0 0-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200c-109.1 1.7-197 90.6-197 200c0 62.8 29 118.8 74.2 155.5a301 301 0 0 0-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 0 0 8 8.2h56c4.3 0 7.9-3.4 8-7.7c1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 0 1 612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 0 0 8-8.2c-2-77-33-149.2-87.8-203.9M612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 0 1-37.5-91.8c.3-32.8 13.4-64.5 36.3-88c24-24.6 56.1-38.3 90.4-38.7c33.9-.3 66.8 12.9 91 36.6c24.8 24.3 38.4 56.8 38.4 91.4c0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 0 1 612 612" />
-                </svg>
-                <div class="l1">Team Player</div>
-                <div class="l2">Collaborating actively to achieve exceptional results.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT SECTIONS -->
-    <section id="abt">
-        <!-- MY STORY -->
-        <div class="story">
-            <h2><i style="background-color: var(--accent-cyan);"></i>My Story</h2>
-            <p>Growing up, I was always fascinated by technology and the endless possibilities it offers. Seeing how
-                digital solutions could simplify tasks, connect people, and create opportunities inspired me to pursue a
-                career in tech. This passion motivated me to study Computer Engineering and continuously develop my
-                skills in Full-Stack Development. Today I am driven by the desire to build solutions that are not only
-                functional but also meaningful.<br><br>As I continue my journey, I remain committed to learning,
-                innovation, and excellence. Every project presents an opportunity to improve my skills, embrace new
-                challenges, and make a positive impact through technology.</p>
-        </div>
-
-        <!-- EDUCATION & CERTIFICATIONS -->
-        <div class="certification">
-            <h2><i style="background-color: var(--accent-orange);"></i>Education & Certification</h2>
-            <div class="certificates">
-                <div class="lautech">
-                    <span class="year">2021 - 2026</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 32 32">
-                        <path fill="var(--accent-cyan)"
-                            d="m24 17l1.912 3.703l4.088.594L27 24l.771 4L24 25.75L20.229 28L21 24l-3-2.703l4.2-.594zM6 16h6v2H6zm0-4h10v2H6zm0-4h10v2H6z" />
-                        <path fill="var(--accent-cyan)"
-                            d="M16 26H4V6h24v10h2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h12Z" />
-                    </svg>
-                    <div>
-                        <div class="l1">Ladoke Akintola University Of Technology</div>
-                        <div class="l2">B.Tech in Computer Engineering</div>
-                        <div class="l">Undergraduate (Expected Graduation: 2026)</div>
-                    </div>
-                </div>
-
-                <div class="sqi">
-                    <span class="year">2026</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 32 32">
-                        <path fill="var(--accent-orange)"
-                            d="m24 17l1.912 3.703l4.088.594L27 24l.771 4L24 25.75L20.229 28L21 24l-3-2.703l4.2-.594zM6 16h6v2H6zm0-4h10v2H6zm0-4h10v2H6z" />
-                        <path fill="var(--accent-orange)"
-                            d="M16 26H4V6h24v10h2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h12Z" />
-                    </svg>
-                    <div>
-                        <div class="s1">SQI College of ICT</div>
-                        <div class="s2">Certified Full Stack Website Developer</div>
-                        <div class="s">Professional Certification Completed</div>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero page-section">
+            <div class="hero-profile-container">
+                <div class="profile-card">
+                    <div class="profile-img-wrapper">
+                        <img src="./IMAGES/my picture.png" alt="Dawodu Rafeeq Folahan - Full Stack Website Developer" class="profile-img">
+                        <div class="profile-overlay"></div>
                     </div>
                 </div>
             </div>
+
+            <div class="abt hero-content">
+                <div class="more">MORE ABOUT ME</div>
+                <h1 class="name">I'M <br><span class="highlight">Dawodu Rafeeq Folahan.</span></h1>
+                <div class="occupation">
+                    <span>Full Stack Website Developer</span>
+                    <hr>
+                </div>
+                <p>I am a passionate Full Stack Website Developer with 2+ years of experience building dynamic, resilient, and visually captivating web applications. I turn complex logic into scalable, modern web experiences.</p>
+
+                <div class="button hero-actions">
+                    <a href="./path-to-your-cv.pdf" class="btn-primary down" download>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.877a2 2 0 0 0 1.94-1.515L22 17" />
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="mailto:dawodurafeeq84@gmail.com?subject=Full%20Stack%20Development%20Inquiry" class="btn-outline con">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.357 7.714l6.98 4.654c.963.641 1.444.962 1.964 1.087c.46.11.939.11 1.398 0c.52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327" />
+                        </svg>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+
+                <div class="icons">
+                    <a href="https://github.com/Ramzy-Tech04" target="_blank" title="GitHub" aria-label="GitHub" class="social-icon-btn">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn" aria-label="LinkedIn" class="social-icon-btn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" title="Instagram" aria-label="Instagram" class="social-icon-btn">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHARACTERISTICS CARDS -->
+        <div class="cha-container">
+            <div class="cha">
+                <div class="clean">
+                    <div class="cha-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 36 36" style="color: var(--accent-cyan);">
+                            <path fill="currentColor" d="M13.71 12.59a1 1 0 0 0-1.39-.26l-6.53 4.45a1 1 0 0 0 0 1.65l6.53 4.45a1 1 0 1 0 1.13-1.65l-5.32-3.62L13.45 14a1 1 0 0 0 .26-1.41" />
+                            <path fill="currentColor" d="m30.21 16.78l-6.53-4.45A1 1 0 1 0 22.55 14l5.32 3.63l-5.32 3.63a1 1 0 0 0 1.13 1.65l6.53-4.45a1 1 0 0 0 0-1.65Z" />
+                            <path fill="currentColor" d="M19.94 9.83a.9.9 0 0 0-1.09.66l-3.44 13.8a.9.9 0 0 0 .66 1.09h.22a.9.9 0 0 0 .87-.68l3.44-13.81a.9.9 0 0 0-.66-1.06" />
+                        </svg>
+                    </div>
+                    <div class="l1">Clean Code</div>
+                    <div class="l2">Writing clean, scalable, modular, and maintainable web application codebases.</div>
+                </div>
+
+                <div class="clean">
+                    <div class="cha-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 24 24" style="color: var(--accent-orange);">
+                            <path fill="currentColor" d="M3.414 13.778L2 15.192l4.949 2.121l2.122 4.95l1.414-1.414l-.707-3.536L13.091 14l3.61 7.704l1.339-1.339l-1.19-10.123l2.828-2.829a2 2 0 1 0-2.828-2.828l-2.903 2.903L3.824 6.297L2.559 7.563l7.644 3.67l-3.253 3.253z" />
+                        </svg>
+                    </div>
+                    <div class="l1">Problem Solver</div>
+                    <div class="l2">Designing pragmatic, efficient full stack solutions for complex client needs.</div>
+                </div>
+
+                <div class="clean">
+                    <div class="cha-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 1024 1024" style="color: var(--accent-cyan);">
+                            <path fill="currentColor" d="M824.2 699.9a301.6 301.6 0 0 0-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200c-109.1 1.7-197 90.6-197 200c0 62.8 29 118.8 74.2 155.5a301 301 0 0 0-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 0 0 8 8.2h56c4.3 0 7.9-3.4 8-7.7c1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 0 1 612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 0 0 8-8.2c-2-77-33-149.2-87.8-203.9M612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 0 1-37.5-91.8c.3-32.8 13.4-64.5 36.3-88c24-24.6 56.1-38.3 90.4-38.7c33.9-.3 66.8 12.9 91 36.6c24.8 24.3 38.4 56.8 38.4 91.4c0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 0 1 612 612" />
+                        </svg>
+                    </div>
+                    <div class="l1">Team Player</div>
+                    <div class="l2">Fostering active collaboration and seamless website engineering handoffs.</div>
+                </div>
+            </div>
         </div>
 
-        <!-- WHAT I DO -->
-        <div class="what">
-            <h2><i style="background-color: var(--accent-cyan);"></i>What I Do</h2>
-            <ul>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 14 14">
-                        <g fill="none" stroke="var(--accent-cyan)" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M13.5 10.5v-8A.5.5 0 0 0 13 2H1c-.265 0-.5.235-.5.5v8c0 .265.235.5.5.5h12c.265 0 .5-.235.5-.5M6 11l-1 2.5M8 11l1 2.5m-5 0h6" />
-                            <path d="M5 5L3.5 6.5L5 8m4-3l1.5 1.5L9 8" />
-                        </g>
-                    </svg>
-                    <div>Frontend Dev</div>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 16 16">
-                        <path fill="var(--accent-orange)"
-                            d="M12.096 6.223A5 5 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.5 4.5 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-.813-.927Q8.378 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.6 4.6 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10q.393 0 .774-.024a4.5 4.5 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4" />
-                    </svg>
-                    <div>Backend Dev</div>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
-                        <path fill="var(--accent-cyan)"
-                            d="M12 0L3 7l1.63 1.27L12 14l7.36-5.73L21 7zm7.37 10.73L12 16.47l-7.38-5.73L3 12l9 7l9-7zm0 5L12 21.47l-7.38-5.73L3 17l9 7l9-7z" />
-                    </svg>
-                    <div>Full Stack Dev</div>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 512 512">
-                        <path fill="var(--accent-orange)"
-                            d="M416 352c-12.6-.84-21-4-28-12c-14-16-14-36 5.49-52.48l32.82-29.14c50.27-44.41 50.27-117.21 0-161.63C389.26 64.14 339.54 48 287.86 48c-60.34 0-123.39 22-172 65.11c-90.46 80-90.46 210.92 0 290.87c45 39.76 105.63 59.59 165.64 60h1.84c60 0 119.07-19.5 161.2-56.77C464 390 464 385 444.62 355.56C440 348 431 353 416 352M112 208a32 32 0 1 1 32 32a32 32 0 0 1-32-32m40 135a32 32 0 1 1 32-32a32 32 0 0 1-32 32m40-199a32 32 0 1 1 32 32a32 32 0 0 1-32-32m64 271a48 48 0 1 1 48-48a48 48 0 0 1-48 48m72-239a32 32 0 1 1 32-32a32 32 0 0 1-32 32" />
-                    </svg>
-                    <div>UI/UX Design</div>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
-                        <g fill="none" stroke="var(--accent-orange)" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2">
-                            <path d="M15 6h3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3H6a3 3 0 0 1 -3 -3V9a3 3 0 0 1 3 -3h3" />
-                            <path d="M7 9.5 9.5 12 7 14.5" />
-                            <path d="M12 14.5h4.5" />
-                        </g>
-                    </svg>
-                    <div>API Integration</div>
-                </li>
-            </ul>
-        </div>
-    </section>
+        <!-- MAIN CONTENT SECTIONS -->
+        <section id="about-story" class="page-section">
+            <!-- MY STORY -->
+            <div class="story">
+                <h2><i class="section-indicator cyan"></i>My Story</h2>
+                <div class="title-bar"></div>
+                <p>Growing up, I was always fascinated by web technology and the endless possibilities of online software. Seeing how web applications could simplify daily tasks, connect global audiences, and create business opportunities inspired me to pursue full stack website development. This passion motivated me to study Computer Engineering while mastering full stack web architecture.<br><br>As a Full Stack Website Developer, I focus on constructing complete web experiences—from designing high-converting user interfaces to building secure server databases and APIs. Every website project is an opportunity to refine my development skills, conquer modern engineering challenges, and deliver exceptional value.</p>
+            </div>
 
-    <!-- FOOTER SECTION -->
-    <footer id="contact" class="site-footer">
-        <div class="footer-divider"></div>
+            <!-- EDUCATION & CERTIFICATIONS -->
+            <div class="certification">
+                <h2><i class="section-indicator orange"></i>Education & Certification</h2>
+                <div class="title-bar"></div>
+                <div class="certificates">
+                    <div class="lautech">
+                        <span class="year">2021 - 2026</span>
+                        <div class="cert-card-content">
+                            <img src="IMAGES/LAUTECH-logo.png" alt="Ladoke Akintola University of Technology Crest" class="school-logo">
+                            <div>
+                                <div class="l1">Ladoke Akintola University Of Technology</div>
+                                <div class="l2">B.Tech in Computer Engineering</div>
+                                <div class="l">Undergraduate (Expected Graduation: 2026)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sqi">
+                        <span class="year">2026</span>
+                        <div class="cert-card-content">
+                            <img src="./IMAGES/SQI-logo.png" alt="SQI College of ICT Logo" class="school-logo">
+                            <div>
+                                <div class="s1">SQI College of ICT</div>
+                                <div class="s2">Certified Full Stack Website Developer</div>
+                                <div class="s">Professional Certification Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WHAT I DO -->
+            <div class="what">
+                <h2><i class="section-indicator cyan"></i>What I Do</h2>
+                <div class="title-bar"></div>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 14 14">
+                            <g fill="none" stroke="var(--accent-cyan)" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.5 10.5v-8A.5.5 0 0 0 13 2H1c-.265 0-.5.235-.5.5v8c0 .265.235.5.5.5h12c.265 0 .5-.235.5-.5M6 11l-1 2.5M8 11l1 2.5m-5 0h6" />
+                                <path d="M5 5L3.5 6.5L5 8m4-3l1.5 1.5L9 8" />
+                            </g>
+                        </svg>
+                        <div>Frontend Dev</div>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 16 16">
+                            <path fill="var(--accent-orange)" d="M12.096 6.223A5 5 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.5 4.5 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-.813-.927Q8.378 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.6 4.6 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10q.393 0 .774-.024a4.5 4.5 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4" />
+                        </svg>
+                        <div>Backend Dev</div>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                            <path fill="var(--accent-cyan)" d="M12 0L3 7l1.63 1.27L12 14l7.36-5.73L21 7zm7.37 10.73L12 16.47l-7.38-5.73L3 12l9 7l9-7zm0 5L12 21.47l-7.38-5.73L3 17l9 7l9-7z" />
+                        </svg>
+                        <div>Full Stack Dev</div>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="var(--accent-orange)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M15 6h3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3H6a3 3 0 0 1 -3 -3V9a3 3 0 0 1 3 -3h3" />
+                                <path d="M7 9.5 9.5 12 7 14.5" />
+                                <path d="M12 14.5h4.5" />
+                            </g>
+                        </svg>
+                        <div>API Integration</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS SECTION -->
+        <section id="skills" class="skills-section page-section">
+            <div class="skills-container">
+                <div class="section-title-wrapper">
+                    <h2><i class="section-indicator cyan"></i> Technical Skills</h2>
+                    <div class="title-bar"></div>
+                    <p>Full stack web technologies, frameworks, databases, and development tools I work with daily.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span class="skill-name">CSS3 & Bootstrap</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span class="skill-name">JavaScript (ES6+)</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-react-original colored"></i>
+                            <span class="skill-name">React.js</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <span class="skill-name">Node.js & Express</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-tailwindcss-plain colored"></i>
+                            <span class="skill-name">Tailwind CSS</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-git-plain colored"></i>
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span class="skill-name">MongoDB & SQL</span>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-overlay-glow"></div>
+        
         <div class="footer-container">
-            <div class="footer-brand">
-                <a href="./index.html" class="brand-container">
-                    <img src="./IMAGES/my logo.png" alt="Logo" class="brand-logo">
-                    <div>
-                        <div class="logo-text">Dawodu Rafeeq</div>
-                        <div class="logo-sub">Full Stack Developer</div>
+            <!-- Brand & Availability Column -->
+            <div class="footer-col footer-col-brand">
+                <a href="./index.html#home" class="footer-brand-logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="./IMAGES/my logo.png" alt="Dawodu Rafeeq Favicon Logo" class="footer-logo-img">
+                    </div>
+                    <div class="brand-text">
+                        <span class="logo-text">Dawodu <span class="text-cyan">Rafeeq</span></span>
+                        <span class="logo-sub">Full Stack Website Developer</span>
                     </div>
                 </a>
+                
                 <p class="footer-desc">
-                    Crafting dynamic, performant, and reliable web applications. Turning complex code into elegant
-                    solutions.
+                    Building fast, modern & scalable websites & applications that make an impact.
                 </p>
-                <div class="social-links">
-                    <a href="https://github.com/Ramzy-Tech04" target="_blank" title="GitHub"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" title="Instagram"><i
-                            class="fa-brands fa-instagram"></i></a>
+
+                <!-- Social Media Links -->
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/devrafeeq" target="_blank" aria-label="GitHub" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Work Status Card -->
+                <div class="availability-badge">
+                    <div class="badge-icon-bg">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="badge-info">
+                        <strong>Available Worldwide</strong>
+                        <span>Open to work • Remote Friendly</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-nav">
-                <h4>Quick Links</h4>
+            <!-- Quick Links Column -->
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-title">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#hero">About Me</a></li>
-                    <li><a href="./index.html#skills">Skills</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="#abt">Experience</a></li>
+                    <li><a href="./index.html#home"><i class="fa-solid fa-chevron-right link-chevron"></i> Home</a></li>
+                    <li><a href="#about-story"><i class="fa-solid fa-chevron-right link-chevron"></i> About</a></li>
+                    <li><a href="./projects.html"><i class="fa-solid fa-chevron-right link-chevron"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-chevron-right link-chevron"></i> Contact</a></li>
                 </ul>
             </div>
 
-            <div class="footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Subscribe to get updates on my latest projects and tech articles.</p>
-                <form class="newsletter-form" action="#" method="POST">
-                    <input type="email" placeholder="Your Email Address" required>
-                    <button type="submit" class="btn-primary">Join</button>
-                </form>
+            <!-- Get In Touch Column -->
+            <div class="footer-col footer-col-touch">
+                <h4 class="footer-title">Get In Touch</h4>
+                <p class="touch-desc">
+                    Have a question, collaboration idea or just want to say hi?<br>I'd love to hear from you.
+                </p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <a href="mailto:dawodurafeeq84@gmail.com">dawodurafeeq84@gmail.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <a href="https://wa.me/2349038665922" target="_blank">09038665922</a>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Ibadan, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Card Column -->
+            <div class="footer-col footer-col-cta">
+                <h4 class="footer-title">Have a Project?</h4>
+                <div class="cta-card">
+                    <p class="cta-text">
+                        Let's discuss your project and create something impactful together.
+                    </p>
+                    <a href="index.html#contact" class="btn-hire-me">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Start a Project</span>
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Bottom Copyright Section -->
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p>&copy; 2026 Dawodu Rafeeq Folahan. All Rights Reserved.</p>
-                <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <span>&bull;</span>
-                    <a href="#">Terms of Service</a>
-                </div>
+                <p>&copy; 2026 <span class="copyright-name">Dawodu Rafeeq</span>. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-
+    <!-- INTERACTIVE JAVASCRIPT -->
     <script>
+        // Back Button Logic
+        const btnBack = document.getElementById('btnBack');
+        if (btnBack) {
+            btnBack.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (window.history.length > 1 && document.referrer) {
+                    window.history.back();
+                } else {
+                    window.location.href = './index.html';
+                }
+            });
+        }
+
+        // Light/Dark Theme Switcher Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const rootHtml = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        rootHtml.setAttribute('data-theme', savedTheme);
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = rootHtml.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                rootHtml.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        // Mobile Menu Navigation Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        const icon = menuToggle.querySelector('i');
+        const icon = menuToggle ? menuToggle.querySelector('i') : null;
 
-        // Toggle menu visibility
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-xmark');
+                    }
+                });
+            });
+        }
+
+        // Active Section Scroll Highlight with Indicator
+        const pageSections = document.querySelectorAll('.page-section, #contact');
+        const navItems = document.querySelectorAll('.nav-links .nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            pageSections.forEach(section => {
+                const sectionTop = section.offsetTop - 180;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
             });
         });
     </script>
