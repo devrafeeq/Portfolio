@@ -1,208 +1,223 @@
-/* Modern motion layer. Include at the end of <body> (or with `defer`). */
-(() => {
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
-    const $ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+/**
+ * DevRafeeq Portfolio Motion, Dynamic Cosmic Star Field & Nav Engine
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
 
-    if (!reduce) document.documentElement.classList.add('anim');
+    /* ==========================================================================
+       1. ENHANCED STAR FIELD BACKGROUND CANVAS (SHOOTING STARS & GLOW)
+       ========================================================================== */
+    const canvas = document.createElement('canvas');
+    canvas.id = 'stars-canvas';
+    Object.assign(canvas.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        pointerEvents: 'none',
+        zIndex: '-1',
+        opacity: '0.85'
+    });
+    document.body.prepend(canvas);
 
-    /* ---------- 1. Scroll progress + header + parallax var ---------- */
-    const bar = document.createElement('div');
-    bar.className = 'scroll-progress';
-    bar.setAttribute('aria-hidden', 'true');
-    document.body.prepend(bar);
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
 
-    const nativeTimeline = CSS.supports('animation-timeline: scroll()');
-    const header = document.querySelector('header');
-    let lastY = scrollY;
-    let ticking = false;
+    // Create randomized star field
+    const starCount = Math.floor((width * height) / 2500);
+    const stars = Array.from({ length: starCount }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 1.6 + 0.3,
+        alpha: Math.random(),
+        twinkleSpeed: (Math.random() * 0.015 + 0.005) * (Math.random() < 0.5 ? 1 : -1)
+    }));
 
-    function onScroll() {
-        const y = scrollY;
-        const max = document.documentElement.scrollHeight - innerHeight;
+    // Shooting stars array
+    const shootingStars = [];
 
-        if (!nativeTimeline) bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-        if (!reduce) document.documentElement.style.setProperty('--scroll-y', y);
-
-        if (header) {
-            header.classList.toggle('is-scrolled', y > 20);
-            header.classList.toggle('is-hidden', y > lastY && y > 200);
+    function createShootingStar() {
+        if (shootingStars.length < 3 && Math.random() < 0.03) {
+            shootingStars.push({
+                x: Math.random() * width,
+                y: Math.random() * (height / 2),
+                length: Math.random() * 80 + 40,
+                speed: Math.random() * 10 + 6,
+                angle: 45,
+                opacity: 1
+            });
         }
-        lastY = y;
-        ticking = false;
     }
-    addEventListener('scroll', () => {
-        if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
     }, { passive: true });
-    onScroll();
 
-    /* ---------- 2. Active nav link ---------- */
-    const navLinks = $('.nav-links a[href^="#"]');
-    const sections = navLinks
-        .map(a => document.querySelector(a.getAttribute('href')))
-        .filter(Boolean);
+    const renderStars = () => {
+        ctx.clearRect(0, 0, width, height);
 
-    if (sections.length) {
-        const spy = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (!e.isIntersecting) return;
-                navLinks.forEach(a =>
-                    a.classList.toggle('is-active', a.getAttribute('href') === `#${e.target.id}`)
-                );
-            });
-        }, { rootMargin: '-45% 0px -50% 0px' });
-        sections.forEach(s => spy.observe(s));
-    }
+        // Twinkling Stars
+        stars.forEach(s => {
+            s.alpha += s.twinkleSpeed;
+            if (s.alpha >= 1 || s.alpha <= 0.15) {
+                s.twinkleSpeed = -s.twinkleSpeed;
+            }
 
-    if (reduce) return; // everything below is motion-only
-
-    /* ---------- 3. Hero headline: split into words ---------- */
-    const h1 = document.querySelector('.hero-content h1');
-    if (h1) {
-        const walker = document.createTreeWalker(h1, NodeFilter.SHOW_TEXT);
-        const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
-
-        let n = 0;
-        textNodes.forEach(node => {
-            const frag = document.createDocumentFragment();
-            node.textContent.split(/(\s+)/).forEach(part => {
-                if (!part.trim()) { frag.append(part); return; }
-                const outer = document.createElement('span');
-                outer.className = 'word';
-                const inner = document.createElement('span');
-                inner.className = 'word-inner';
-                inner.style.setProperty('--w', n++);
-                inner.textContent = part;
-                outer.append(inner);
-                frag.append(outer);
-            });
-            node.replaceWith(frag);
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 193, 108, ${s.alpha})`;
+            ctx.shadowBlur = s.radius > 1.2 ? 8 : 0;
+            ctx.shadowColor = '#ffc16c';
+            ctx.fill();
         });
-    }
 
-    /* ---------- 4. Scroll reveals (Web Animations API, blur + rise) ----------
-       Uses element.animate() so it never collides with your hover transforms
-       or transitions. Elements already using .reveal-on-scroll are skipped. */
-    const targets = $(
-        '.section-title, .projects-grid > *, .contact > *, .hero-actions, .hero-content > p, .code-window'
-    ).filter(el => !el.classList.contains('reveal-on-scroll'));
+        // Dynamic Shooting Stars
+        createShootingStar();
+        shootingStars.forEach((star, index) => {
+            const rad = (star.angle * Math.PI) / 180;
+            const endX = star.x + Math.cos(rad) * star.length;
+            const endY = star.y + Math.sin(rad) * star.length;
 
-    const groupCount = new Map();
-    targets.forEach(el => {
-        const parent = el.parentElement;
-        const i = groupCount.get(parent) || 0;
-        groupCount.set(parent, i + 1);
-        el.dataset.delay = Math.min(i, 6) * 90;
-        el.style.opacity = '0';
-    });
+            const gradient = ctx.createLinearGradient(star.x, star.y, endX, endY);
+            gradient.addColorStop(0, `rgba(255, 193, 108, ${star.opacity})`);
+            gradient.addColorStop(1, 'rgba(255, 193, 108, 0)');
 
-    const revealer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            revealer.unobserve(el);
+            ctx.beginPath();
+            ctx.moveTo(star.x, star.y);
+            ctx.lineTo(endX, endY);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
 
-            el.animate(
-                [
-                    { opacity: 0, transform: 'translateY(36px) scale(0.98)', filter: 'blur(6px)' },
-                    { opacity: 1, transform: 'none', filter: 'blur(0)' }
-                ],
-                {
-                    duration: 900,
-                    delay: Number(el.dataset.delay) || 0,
-                    easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-                    fill: 'backwards'
-                }
-            );
-            el.style.opacity = '';
-            el.classList.add('is-in');
+            star.x += Math.cos(rad) * star.speed;
+            star.y += Math.sin(rad) * star.speed;
+            star.opacity -= 0.015;
+
+            if (star.opacity <= 0 || star.x > width || star.y > height) {
+                shootingStars.splice(index, 1);
+            }
         });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
-    targets.forEach(el => revealer.observe(el));
-
-    /* ---------- 5. Pointer effects (desktop only) ---------- */
-    if (!finePointer) return;
-
-    // Cursor spotlight
-    $('.project-card, .card-front, .contact-form').forEach(card => {
-        card.addEventListener('pointermove', e => {
-            const r = card.getBoundingClientRect();
-            card.style.setProperty('--mx', `${e.clientX - r.left}px`);
-            card.style.setProperty('--my', `${e.clientY - r.top}px`);
-        });
-    });
-
-    // 3D tilt on the hero code window
-    const win = document.querySelector('.code-window');
-    if (win) {
-        win.addEventListener('pointermove', e => {
-            const r = win.getBoundingClientRect();
-            const x = (e.clientX - r.left) / r.width - 0.5;
-            const y = (e.clientY - r.top) / r.height - 0.5;
-            win.style.setProperty('--ry', `${x * 10}deg`);
-            win.style.setProperty('--rx', `${-y * 10}deg`);
-        });
-        win.addEventListener('pointerleave', () => {
-            win.style.setProperty('--rx', '0deg');
-            win.style.setProperty('--ry', '0deg');
-        });
-    }
-
-    // Magnetic buttons
-    $('.btn-primary, .btn-outline').forEach(btn => {
-        btn.addEventListener('pointermove', e => {
-            const r = btn.getBoundingClientRect();
-            const dx = (e.clientX - r.left - r.width / 2) * 0.25;
-            const dy = (e.clientY - r.top - r.height / 2) * 0.35;
-            btn.style.translate = `${dx}px ${dy}px`;
-        });
-        btn.addEventListener('pointerleave', () => { btn.style.translate = ''; });
-    });
-})();
-
-document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    // 1. Collect all target section IDs safely from navigation links
-    const targets = Array.from(navLinks)
-        .map(link => link.getAttribute("href"))
-        .filter(href => href && href.startsWith("#") && href.length > 1)
-        .map(href => href.substring(1));
-
-    // 2. Select only sections that actually exist on the page
-    const sections = targets
-        .map(id => document.getElementById(id))
-        .filter(section => section !== null);
-
-    // 3. Set up Intersection Observer
-    const observerOptions = {
-        root: null,
-        rootMargin: "-20% 0px -60% 0px", // Activates when section enters the upper viewport
-        threshold: 0
+        requestAnimationFrame(renderStars);
     };
+    renderStars();
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+    /* ==========================================================================
+       2. SCROLL HIDE/SHOW HEADER ENGINE
+       ========================================================================== */
+    const header = document.getElementById('main-header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            // Scrolling down -> hide header
+            header.classList.add('header-hidden');
+        } else {
+            // Scrolling up -> show header
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+    }, { passive: true });
+
+    /* ==========================================================================
+       3. SCROLL REVEAL OBSERVER WITH STAGGER EFFECT
+       ========================================================================== */
+    const revealItems = document.querySelectorAll('.reveal-item');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.12 });
 
-                // Clear 'active' class from all nav links
-                navLinks.forEach((link) => link.classList.remove("active"));
+    revealItems.forEach((item, index) => {
+        item.style.transitionDelay = `${(index % 3) * 0.1}s`;
+        revealObserver.observe(item);
+    });
 
-                // Safely find and highlight the matching nav link
-                const activeLink = Array.from(navLinks).find(
-                    (link) => link.getAttribute("href") === `#${id}`
-                );
+    /* ==========================================================================
+       4. NAVIGATION SPY & ACTIVE SECTION DETECTOR
+       ========================================================================== */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.mobile-bottom-nav .nav-link, .footer-links .nav-link');
+    const headerSectionLabel = document.getElementById('current-section-label');
 
-                if (activeLink) {
-                    activeLink.classList.add("active");
+    const activeNavObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.getAttribute('id');
+
+                // Update active class on nav links
+                navLinks.forEach(link => {
+                    const targetSection = link.getAttribute('data-section') || link.getAttribute('href')?.replace('#', '');
+                    if (targetSection === currentId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Update header title text dynamically
+                if (headerSectionLabel) {
+                    const formattedName = currentId.replace('-', ' ');
+                    headerSectionLabel.textContent = formattedName.charAt(0).toUpperCase() + formattedName.slice(1);
                 }
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.35 });
 
-    // Observe all valid sections
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach(section => activeNavObserver.observe(section));
+
+    /* ==========================================================================
+       5. PROJECT FILTERING LOGIC
+       ========================================================================== */
+    const filterButtons = document.querySelectorAll('#project-filters .filter-btn');
+    const projectItems = document.querySelectorAll('#projects-grid .project-item');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            projectItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(15px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 200);
+                }
+            });
+        });
+    });
+
+    /* ==========================================================================
+       6. CONTACT FORM HANDLER
+       ========================================================================== */
+    const contactForm = document.getElementById('portfolio-contact-form');
+    const feedbackMsg = document.getElementById('contact-feedback');
+
+    if (contactForm && feedbackMsg) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.reset();
+            feedbackMsg.classList.remove('hidden');
+        });
+    }
 });
