@@ -1,374 +1,437 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Portfolio | Dawodu Rafeeq Folahan — Full Stack Website Developer</title>
-    <link rel="icon" href="./IMAGES/my logo.png">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons & Devicon Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="projects.css">
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Projects Portfolio | Dawodu Rafeeq Folahan — Full Stack Developer</title>
+  <link rel="icon" href="./IMAGES/my logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Master Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
 </head>
 
 <body>
 
-    <!-- MOVING, SPARKLE & SHOOTING STARS BACKGROUND -->
-    <div class="stars-container" aria-hidden="true">
-        <!-- Twinkling & Pulsing Stars -->
-        <div class="star star-cyan" style="--top: 5%; --left: 8%; --size: 4px; --duration: 3.5s; --delay: 0s;"></div>
-        <div class="star star-white" style="--top: 10%; --left: 25%; --size: 3px; --duration: 4s; --delay: 1.2s;"></div>
-        <div class="star star-cyan" style="--top: 15%; --left: 10%; --size: 3px; --duration: 4s; --delay: 0s;"></div>
-        <div class="star star-white" style="--top: 12%; --left: 60%; --size: 3px; --duration: 5s; --delay: 2.5s;"></div>
-        <div class="star star-orange" style="--top: 18%; --left: 45%; --size: 4px; --duration: 4.8s; --delay: 0.3s;"></div>
-        <div class="star star-orange" style="--top: 25%; --left: 80%; --size: 4px; --duration: 6s; --delay: 1s;"></div>
-        <div class="star star-cyan" style="--top: 28%; --left: 92%; --size: 5px; --duration: 3.8s; --delay: 1.7s;"></div>
-        <div class="star star-white" style="--top: 32%; --left: 5%; --size: 3px; --duration: 4.2s; --delay: 0.9s;"></div>
-        <div class="star star-cyan" style="--top: 35%; --left: 15%; --size: 4px; --duration: 4.5s; --delay: 1.2s;"></div>
-        <div class="star star-cyan" style="--top: 40%; --left: 30%; --size: 3px; --duration: 3s; --delay: 2s;"></div>
-        <div class="star star-orange" style="--top: 42%; --left: 58%; --size: 4px; --duration: 5.5s; --delay: 0.4s;"></div>
-        <div class="star star-white" style="--top: 48%; --left: 82%; --size: 3px; --duration: 4.1s; --delay: 1.8s;"></div>
-        <div class="star star-orange" style="--top: 50%; --left: 90%; --size: 5px; --duration: 6s; --delay: 0.8s;"></div>
-        <div class="star star-cyan" style="--top: 55%; --left: 12%; --size: 4px; --duration: 3.6s; --delay: 2.2s;"></div>
-        <div class="star star-white" style="--top: 60%; --left: 70%; --size: 3px; --duration: 5s; --delay: 0.5s;"></div>
-        <div class="star star-orange" style="--top: 65%; --left: 38%; --size: 4px; --duration: 4.7s; --delay: 1.1s;"></div>
-        <div class="star star-cyan" style="--top: 68%; --left: 52%; --size: 3px; --duration: 3.9s; --delay: 0.6s;"></div>
-        <div class="star star-white" style="--top: 72%; --left: 95%; --size: 4px; --duration: 5.2s; --delay: 2.8s;"></div>
-        <div class="star star-orange" style="--top: 75%; --left: 20%; --size: 5px; --duration: 7s; --delay: 3s;"></div>
-        <div class="star star-white" style="--top: 80%; --left: 45%; --size: 3px; --duration: 3.5s; --delay: 2.1s;"></div>
-        <div class="star star-cyan" style="--top: 82%; --left: 65%; --size: 4px; --duration: 4.4s; --delay: 1.3s;"></div>
-        <div class="star star-cyan" style="--top: 85%; --left: 85%; --size: 4px; --duration: 4check; --delay: 1.5s;"></div>
-        <div class="star star-orange" style="--top: 90%; --left: 10%; --size: 4px; --duration: 5.1s; --delay: 0.2s;"></div>
-        <div class="star star-white" style="--top: 93%; --left: 33%; --size: 3px; --duration: 3.7s; --delay: 2.4s;"></div>
-        <div class="star star-cyan" style="--top: 96%; --left: 78%; --size: 4px; --duration: 4.6s; --delay: 1.0s;"></div>
+  <!-- Animated Background Stars Canvas -->
+  <canvas id="stars-canvas"></canvas>
 
-        <!-- Shooting Stars -->
-        <div class="shooting-star" style="--top: 8%; --left: 35%; --delay: 0s;"></div>
-        <div class="shooting-star" style="--top: 22%; --left: 85%; --delay: 2.5s;"></div>
-        <div class="shooting-star" style="--top: 45%; --left: 75%; --delay: 5s;"></div>
-        <div class="shooting-star" style="--top: 62%; --left: 40%; --delay: 7.5s;"></div>
-        <div class="shooting-star" style="--top: 78%; --left: 20%; --delay: 10s;"></div>
-    </div>
-
-    <!-- AMBIENT GLOW -->
-    <div class="ambient-glow"></div>
-
-    <!-- HEADER & NAVIGATION -->
-    <header>
-        <div class="nav-container">
-            <div class="brand-wrapper">
-                <button type="button" class="btn-back" id="btnBack" title="Go to previous page">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Back</span>
-                </button>
-
-                <a href="./index.html" class="brand-container">
-                    <img src="./IMAGES/my logo.png" alt="Logo" class="brand-logo">
-                    <div class="brand-text">
-                        <div class="logo-text">Dawodu Rafeeq</div>
-                        <div class="logo-sub">Full Stack Web Developer</div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- NAVIGATION LINKS -->
-            <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html#hero" class="nav-item">Home</a></li>
-                <li><a href="./about.html" class="nav-item">About</a></li>
-                <li><a href="./about.html#skills" class="nav-item">Skills</a></li>
-                <li><a href="./projects.html" class="nav-item active">Projects</a></li>
-                <li><a href="./index.html#contact" class="nav-item">Contact</a></li>
-            </ul>
-
-            <!-- HEADER RIGHT ACTIONS -->
-            <div class="header-actions">
-                <!-- THEME TOGGLE BUTTON -->
-                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5M2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1m18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1M11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1m0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1M5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0zM7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0z" />
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12.3 2a10 10 0 0 0-1.9 20a10 10 0 0 0 8.8-5.3a1 1 0 0 0-1.1-1.4a8 8 0 1 1-6.8-12.3a1 1 0 0 0 1-1A1 1 0 0 0 12.3 2" />
-                    </svg>
-                </button>
-
-                <a href="./path-to-your-cv.pdf" class="btn-cv-header" download>
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    <span>Download CV</span>
-                </a>
-
-                <!-- MOBILE MENU TOGGLE BUTTON -->
-                <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+  <!-- Fixed Top Header -->
+  <header class="portfolio-header" id="main-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <a href="index.html" class="btn-back-nav" id="btnBack" title="Go to previous page">
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span>Back</span>
+        </a>
+        <img alt="DevRafeeq Brand Monogram Logo" class="brand-logo" src="./IMAGES/my logo.png" />
+        <div class="brand-text d-none d-sm-block">
+          <div class="brand-title">
+            <span>Dawodu Rafeeq</span>
+            <span class="status-dot"></span>
+          </div>
+          <span class="brand-role">Full Stack Developer</span>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="page-section">
-            <div class="archive-hero">
-                <div class="archive-badge">
-                    <i class="fa-solid fa-code-branch"></i> PORTFOLIO ARCHIVE
+      <div class="header-actions">
+        <a href="index.html#contact" class="header-btn" aria-label="Contact">
+          <span class="material-symbols-outlined">send</span>
+        </a>
+        <div class="profile-avatar">
+          <img alt="Profile" src="./IMAGES/mypicture.png" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="portfolio-main">
+    <!-- PROJECTS HERO ARCHIVE SECTION -->
+    <section class="content-section hero-compact-section" id="projects-hero">
+      <div class="container max-w-4xl text-center pt-2">
+        
+        <!-- Status Pill Tag -->
+        <div class="status-pill reveal-item mb-2">
+          <span class="material-symbols-outlined text-primary fs-6 me-1">code_blocks</span>
+          <span class="pill-text">PORTFOLIO ARCHIVE</span>
+        </div>
+
+        <h1 class="hero-headline reveal-item mb-2">
+          Featured <span class="hero-gradient-text">Engineering Works</span>
+        </h1>
+
+        <p class="hero-desc reveal-item mx-auto mb-3" style="max-width: 650px;">
+          Explore a comprehensive archive of full-stack web applications, custom platforms, and responsive website systems designed, architected, and built for performance.
+        </p>
+
+        <!-- Category Filter Controls -->
+        <div class="filter-bar reveal-item" id="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="api">APIs &amp; Backend</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID SHOWCASE SECTION -->
+    <section class="content-section pt-0">
+      <div class="container max-w-4xl">
+        <div class="row g-3 g-md-4 text-start" id="projects-grid">
+
+          <!-- Project Card 1 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="fullstack">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">Full Stack</span>
+                <img src="./IMAGES/young p.png" alt="YoungP Electrical Front Page Screenshot" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">YoungP Electrical</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Real-Time Estimator &amp; Portal</span>
+                  <p class="project-desc">A full business web application built for an electrical service provider to display catalogues, estimate costs, and handle client booking requests.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">HTML5</span>
+                    <span class="tech-pill">CSS3</span>
+                    <span class="tech-pill">JavaScript</span>
+                  </div>
                 </div>
-                <h1 class="archive-title">Featured <span class="highlight">Projects</span></h1>
-                <p class="archive-subtitle">Explore a selection of my latest full stack web applications, interactive web tools, and digital solutions.</p>
-
-                <div class="filter-controls">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-                    <button class="filter-btn" data-filter="frontend">Frontend</button>
-                    <button class="filter-btn" data-filter="api">APIs & Backend</button>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
                 </div>
-            </div>
+              </div>
+            </article>
+          </div>
 
-            <div class="projects-grid">
-                <!-- Example Project 1 -->
-                <article class="project-card" data-category="frontend">
-                    <div class="project-image-wrapper">
-                        <img src="./IMAGES/mini calculator.png" alt="Mini Calculator" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h3>RamzyCalc Web App</h3>
-                        <p class="project-about">A web-based mathematical calculator application with dynamic expression handling and modern user interfaces.</p>
-                        <div class="tech-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </article>
+          <!-- Project Card 2 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="frontend">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">Frontend Tool</span>
+                <img src="./IMAGES/mini calculator.png" alt="RamzyCalc Web App Screenshot" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">RamzyCalc Web App</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Mathematical Computation Engine</span>
+                  <p class="project-desc">A web-based mathematical calculator application featuring real-time expression handling, key binding listeners, and glassmorphic interface.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">HTML5</span>
+                    <span class="tech-pill">CSS3</span>
+                    <span class="tech-pill">JavaScript</span>
+                  </div>
+                </div>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
 
-                <!-- Example Project 2 -->
-                <article class="project-card" data-category="frontend">
-                    <div class="project-image-wrapper">
-                        <img src="./IMAGES/young p.png" alt="YoungP Electrical Portfolio Website" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h3>YoungP Electrical Website</h3>
-                        <p class="project-about">A full business website built for an electrical service provider to display catalogues and handle client booking requests.</p>
-                        <div class="tech-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </article>
+          <!-- Project Card 3 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="fullstack">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">SaaS Dashboard</span>
+                <img src="./IMAGES/rynex.png" alt="Rynex Technologies Screenshot" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">Rynex Technologies</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Cloud Infrastructure Telemetry</span>
+                  <p class="project-desc">SaaS infrastructure monitoring dashboard handling streaming cloud metrics, latency heatmaps, and automated incident alert webhooks.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">React 19</span>
+                    <span class="tech-pill">WebSockets</span>
+                    <span class="tech-pill">Node Microservice</span>
+                  </div>
+                </div>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
 
-                <!-- Example Project 3 -->
-                <article class="project-card" data-category="api">
-                    <div class="project-image-wrapper">
-                        <img src="./IMAGES/my logo.png" alt="RESTful API Service" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h3>Task & Workflow REST API</h3>
-                        <p class="project-about">Scalable RESTful API providing JWT authentication, rate limiting, MongoDB database schemas, and modular routing handlers.</p>
-                        <div class="tech-tags">
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>MongoDB</span>
-                            <span>JWT</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-card-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                            <a href="https://github.com/Ramzy-Tech04" class="btn-card-github" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+          <!-- Project Card 4 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="frontend">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">E-Commerce</span>
+                <img src="./IMAGES/folas.png" alt="Folas Glamour Screenshot" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">Folas Glamour</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Luxury Apparel Storefront</span>
+                  <p class="project-desc">Luxury boutique e-commerce platform with editorial lookbooks, fluid reactive cart transitions, and responsive mobile checkout UI.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Stripe API</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                  </div>
+                </div>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="api">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">Backend Service</span>
+                <img src="./IMAGES/my logo.png" alt="Task REST API Service" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">Task &amp; Workflow REST API</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Scalable Microservice Engine</span>
+                  <p class="project-desc">Scalable RESTful API architecture providing JWT authentication middleware, rate limiting, MongoDB Mongoose schemas, and modular controllers.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">Express</span>
+                    <span class="tech-pill">MongoDB</span>
+                    <span class="tech-pill">JWT</span>
+                  </div>
+                </div>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="col-12 col-md-6 project-item reveal-item" data-category="fullstack">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <span class="project-badge">Couture Brand</span>
+                <img src="./IMAGES/debee.png" alt="Debee Fashion World Screenshot" class="project-img" />
+                <div class="project-img-overlay"></div>
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">Debee Fashion World</h3>
+                  <span class="mono-sub font-mono d-block mb-2">Couture Portfolio &amp; Booking</span>
+                  <p class="project-desc">Custom fashion atelier showcase featuring interactive lookbook galleries and client consultation appointment scheduling pipeline.</p>
+                  <div class="tag-cloud mb-3">
+                    <span class="tech-pill">MERN Stack</span>
+                    <span class="tech-pill">Booking Engine</span>
+                    <span class="tech-pill">GSAP Motion</span>
+                  </div>
+                </div>
+                <div class="card-action gap-2 flex-wrap mt-auto">
+                  <a href="#" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">open_in_new</span> Live Demo
+                  </a>
+                  <a href="https://github.com/Ramzy-Tech04" target="_blank" rel="noopener" class="project-link-btn">
+                    <span class="material-symbols-outlined">code</span> Repository
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- LOAD MORE PROJECTS BUTTON CONTAINER -->
+        <div class="text-center mt-4 reveal-item" id="load-more-container">
+          <button id="btn-load-more" class="btn-load-more-projects">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span>Load More Projects</span>
+              <span class="material-symbols-outlined icon-arrow">expand_more</span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-overlay-glow"></div>
-        
-        <div class="footer-container">
-            <!-- Brand & Availability Column -->
-            <div class="footer-col footer-col-brand">
-                <a href="./index.html#home" class="footer-brand-logo">
-                    <div class="logo-icon-wrapper">
-                        <img src="./IMAGES/my logo.png" alt="Dawodu Rafeeq Favicon Logo" class="footer-logo-img">
-                    </div>
-                    <div class="brand-text">
-                        <span class="logo-text">Dawodu <span class="text-cyan">Rafeeq</span></span>
-                        <span class="logo-sub">Full Stack Website Developer</span>
-                    </div>
-                </a>
-                
-                <p class="footer-desc">
-                    Building fast, modern & scalable websites & applications that make an impact.
-                </p>
-
-                <!-- Social Media Links -->
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Ramzy-Tech04" target="_blank" aria-label="GitHub" class="social-btn"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/ramzy_tech04/" target="_blank" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-                <!-- Work Status Card -->
-                <div class="availability-badge">
-                    <div class="badge-icon-bg">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <div class="badge-info">
-                        <strong>Available Worldwide</strong>
-                        <span>Open to work • Remote Friendly</span>
-                    </div>
-                </div>
+    <footer class="portfolio-footer">
+      <div class="container max-w-4xl">
+        <div class="footer-glass-panel p-3 p-md-4 rounded-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+          <div class="footer-brand-info text-center text-md-start">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-1">
+              <span class="fw-bold fs-5 text-light">Dawodu Rafeeq</span>
+              <span class="badge-tag">FULL STACK</span>
             </div>
+            <p class="footer-subtext mb-0 font-mono">Crafting boutique MERN web applications with precision &amp; scale.</p>
+          </div>
 
-            <!-- Quick Links Column -->
-            <div class="footer-col footer-col-links">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="./index.html#home"><i class="fa-solid fa-chevron-right link-chevron"></i> Home</a></li>
-                    <li><a href="./about.html#about-story"><i class="fa-solid fa-chevron-right link-chevron"></i> About</a></li>
-                    <li><a href="./projects.html"><i class="fa-solid fa-chevron-right link-chevron"></i> Projects</a></li>
-                    <li><a href="./index.html#contact"><i class="fa-solid fa-chevron-right link-chevron"></i> Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Get In Touch Column -->
-            <div class="footer-col footer-col-touch">
-                <h4 class="footer-title">Get In Touch</h4>
-                <p class="touch-desc">
-                    Have a question, collaboration idea or just want to say hi?<br>I'd love to hear from you.
-                </p>
-                <div class="contact-details">
-                    <div class="detail-item">
-                        <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <a href="mailto:dawodurafeeq84@gmail.com">dawodurafeeq84@gmail.com</a>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                        <a href="https://wa.me/2349038665922" target="_blank">09038665922</a>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <span>Ibadan, Nigeria</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Card Column -->
-            <div class="footer-col footer-col-cta">
-                <h4 class="footer-title">Have a Project?</h4>
-                <div class="cta-card">
-                    <p class="cta-text">
-                        Let's discuss your project and create something impactful together.
-                    </p>
-                    <a href="./index.html#contact" class="btn-hire-me">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>Start a Project</span>
-                    </a>
-                </div>
-            </div>
+          <div class="footer-right-action d-flex align-items-center gap-3">
+            <span class="status-online font-mono text-muted">
+              <span class="dot"></span> 2026 Edition
+            </span>
+            <a href="#projects-hero" class="footer-back-top" aria-label="Back to Top">
+              <span class="material-symbols-outlined">arrow_upward</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Bottom Copyright Section -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-container">
-                <p>&copy; 2026 <span class="copyright-name">Dawodu Rafeeq</span>. All rights reserved.</p>
-            </div>
+        <div class="footer-bottom-bar text-center mt-3 font-mono">
+          © 2026 Dawodu Rafeeq. All rights reserved.
         </div>
+      </div>
     </footer>
+  </main>
 
-    <!-- INTERACTIVE JAVASCRIPT -->
-     <script src="animation.js"></script>
-    <script>
-        // Back Button Logic
-        const btnBack = document.getElementById('btnBack');
-        if (btnBack) {
-            btnBack.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (window.history.length > 1 && document.referrer) {
-                    window.history.back();
-                } else {
-                    window.location.href = './index.html';
-                }
-            });
+  <!-- Mobile Active Bottom Navigation Dock -->
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" class="nav-link">
+      <span class="material-symbols-outlined">terminal</span>
+      <span>Home</span>
+    </a>
+    <a href="about.html" class="nav-link">
+      <span class="material-symbols-outlined">badge</span>
+      <span>About</span>
+    </a>
+    <a href="about.html#skills" class="nav-link">
+      <span class="material-symbols-outlined">data_object</span>
+      <span>Skills</span>
+    </a>
+    <a href="projects.html" class="nav-link active">
+      <span class="material-symbols-outlined">code_blocks</span>
+      <span>Projects</span>
+    </a>
+    <a href="index.html#contact" class="nav-link">
+      <span class="material-symbols-outlined">alternate_email</span>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script src="animation.js"></script>
+  <script>
+    // Back Button Logic
+    const btnBack = document.getElementById('btnBack');
+    if (btnBack) {
+      btnBack.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.history.length > 1 && document.referrer) {
+          window.history.back();
+        } else {
+          window.location.href = 'index.html';
         }
+      });
+    }
 
-        // Light/Dark Theme Switcher Logic
-        const themeToggleBtn = document.getElementById('themeToggle');
-        const rootHtml = document.documentElement;
+    // LOAD MORE & CATEGORY FILTERING ENGINE
+    document.addEventListener('DOMContentLoaded', () => {
+      const BATCH_SIZE = 4; // Number of projects to display per load
+      let visibleCount = BATCH_SIZE;
+      let currentFilter = 'all';
 
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        rootHtml.setAttribute('data-theme', savedTheme);
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectItems = Array.from(document.querySelectorAll('.project-item'));
+      const btnLoadMore = document.getElementById('btn-load-more');
 
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                const currentTheme = rootHtml.getAttribute('data-theme');
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                rootHtml.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-            });
-        }
-
-        // Mobile Menu Navigation Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const icon = menuToggle ? menuToggle.querySelector('i') : null;
-
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-xmark');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    if (icon) {
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-xmark');
-                    }
-                });
-            });
-        }
-
-        // Category Filter Logic
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+      function updateProjectsDisplay() {
+        // Filter projects according to category selected
+        const matchingProjects = projectItems.filter(item => {
+          const category = item.getAttribute('data-category');
+          return currentFilter === 'all' || category === currentFilter;
         });
-    </script>
+
+        // Hide all items first
+        projectItems.forEach(item => item.style.display = 'none');
+
+        // Show matching items up to the visible count limit
+        matchingProjects.slice(0, visibleCount).forEach(item => {
+          item.style.display = 'block';
+          item.classList.add('in-view');
+        });
+
+        // Hide or Show "Load More" button depending on remaining items
+        if (visibleCount >= matchingProjects.length) {
+          btnLoadMore.parentElement.style.display = 'none';
+        } else {
+          btnLoadMore.parentElement.style.display = 'block';
+        }
+      }
+
+      // Handle "Load More" Button Click
+      if (btnLoadMore) {
+        btnLoadMore.addEventListener('click', () => {
+          visibleCount += BATCH_SIZE;
+          updateProjectsDisplay();
+        });
+      }
+
+      // Handle Filter Buttons Click
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          currentFilter = btn.getAttribute('data-filter');
+          visibleCount = BATCH_SIZE; // Reset batch counter on category switch
+          updateProjectsDisplay();
+        });
+      });
+
+      // Initial Call
+      updateProjectsDisplay();
+    });
+  </script>
 </body>
 
 </html>

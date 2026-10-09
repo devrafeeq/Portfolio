@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         requestAnimationFrame(renderStars);
     };
-    renderStars();
+    renderStars();  
 
     /* ==========================================================================
        2. SCROLL HIDE/SHOW HEADER ENGINE
