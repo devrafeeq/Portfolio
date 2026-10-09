@@ -27,7 +27,7 @@
 }
 
 .portfolio-main {
-    padding-bottom: 80px; /* Space to clear fixed bottom nav */
+    padding-bottom: 0 !important; /* Space cleared to align directly with bottom dock */
 }
 
 /* Header & Back Button */
@@ -640,8 +640,18 @@
 }
 
 /* ==========================================================================
-   Mobile Bottom Navigation Dock
+   Footer & Mobile Bottom Navigation Dock Alignment
    ========================================================================== */
+.portfolio-footer {
+    padding-bottom: 5.5rem; /* Leaves room for the bottom dock without extra gap */
+    margin-bottom: 0 !important;
+}
+
+.footer-bottom-bar {
+    margin-bottom: 0 !important;
+    padding-bottom: 0.5rem;
+}
+
 .mobile-bottom-nav {
     position: fixed;
     bottom: 0;
@@ -682,6 +692,12 @@
 }
 
 /* Media Queries for Screen Responsiveness */
+@media (min-width: 992px) {
+    .portfolio-footer {
+        padding-bottom: 2.5rem;
+    }
+}
+
 @media (max-width: 991px) {
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
